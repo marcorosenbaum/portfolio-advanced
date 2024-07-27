@@ -103,13 +103,13 @@ h2 {
 
 /* fly in animation */
 .fly-in {
-  transform: translateX(10000%);
+  opacity: 0;
   animation: flyIn 0.5s forwards;
 }
 
 @keyframes flyIn {
   to {
-    transform: translateX(0);
+    opacity: 1;
   }
 }
 @keyframes fadeIn {

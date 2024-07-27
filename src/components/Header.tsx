@@ -38,7 +38,7 @@ const Header = () => {
       className={`${
         shrinkHeader && windowWidth > 1000
           ? "md:w-1/5 md:top-4"
-          : "w-screen px-32  md:top-1"
+          : "w-10/12 px-32  md:top-1"
       } z-[1000] w-10/12 p-4 fixed md:rounded-full md:border border-accent-color bg-gray-400/60 left-1/2 transform -translate-x-1/2 flex  backdrop-blur-md  transition-all duration-300`}
     >
       <button
