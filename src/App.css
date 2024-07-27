@@ -8,6 +8,15 @@
   line-height: normal;
   margin: 0 auto;
 } */
+body {
+  background: rgb(58, 77, 105);
+  background: linear-gradient(
+    309deg,
+    rgb(92, 122, 167) 0%,
+    rgb(255, 255, 255) 48%,
+    rgb(82, 112, 157) 100%
+  );
+}
 
 html {
   font-size: 16px;
@@ -54,6 +63,7 @@ h2 {
   overflow: hidden;
   animation: fadeIn linear;
   animation-timeline: view(90% 0%);
+  /* background-color: white; */
 }
 
 .card::before {
@@ -71,7 +81,7 @@ h2 {
   transition: transform 0.5s ease;
   transform: scale(0);
   transform-origin: bottom right;
-  z-index: 0;
+  z-index: 10;
   border-radius: inherit;
 }
 

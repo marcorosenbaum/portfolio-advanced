@@ -29,7 +29,9 @@ function App() {
   const { darkMode } = useContext(AppContext);
   return (
     <div
-      className={`${darkMode ? "text-white bg-gray-800 " : ""} duration-300`}
+      className={`${
+        darkMode ? "text-white bg-custom-gradient " : ""
+      } duration-300 `}
     >
       <RouterProvider router={router} />
     </div>

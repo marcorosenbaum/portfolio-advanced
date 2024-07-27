@@ -88,12 +88,12 @@ Scott Graham on unsplash */}
       </section>
 
       {/* circle blurr */}
-      <div className="absolute top-0 left-0 -z-10 inset-0 flex justify-start items-start">
+      {/* <div className="absolute top-0 left-0 -z-10 inset-0 flex justify-start items-start">
         <div className="circle-blur w-[80vh] h-[80vh] -translate-y-1/2 -translate-x-1/2"></div>
       </div>
       <div className="absolute top-0 right-0 -z-10 inset-0 flex justify-end items-start overflow-clip">
         <div className="circle-blur w-[200vh] h-[150vh] -translate-y-1/2 translate-x-1/2"></div>
-      </div>
+      </div> */}
     </div>
   );
 }

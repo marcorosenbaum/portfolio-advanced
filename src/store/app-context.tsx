@@ -8,7 +8,7 @@ const AppContext = createContext({
 import React from "react";
 
 export function AppContextProvider(props: { children: React.ReactNode }) {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   function setDarkModeHandler() {
     setDarkMode((prevDarkMode) => {

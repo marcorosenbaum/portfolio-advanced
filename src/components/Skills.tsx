@@ -37,7 +37,7 @@ const Skills: React.FC = () => {
           className={`skill ${
             isVisible ? "fly-in" : ""
           } flex flex-col flex-1 items-center`}
-          style={{ animationDelay: `${index * 0.2}s` }}
+          style={{ animationDelay: `${0.7 + index * 0.1}s` }}
         >
           <skill.logo />
           <div>{skill.name}</div>

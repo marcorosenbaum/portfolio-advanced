@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import AppContext from "../store/app-context";
 
 const ProjectCard: React.FC<{
   id: string;
@@ -11,11 +12,14 @@ const ProjectCard: React.FC<{
   websiteLink: string;
 }> = ({ id, title, image, description, skills }) => {
   const [ishovered, setIshovered] = useState(false);
+  const { darkMode } = useContext(AppContext);
 
   return (
     <Link
       to={`/projectDetails/${id}`}
-      className="hover:scale-[102%] duration-300 card rounded-xl border border-accent-color/50  shadow-2xl  w-80 flex animate-fadeIn "
+      className={`${
+        darkMode ? "bg-custom-dark" : "bg-white"
+      } hover:scale-[102%] hover:text-black duration-300 card rounded-xl border border-accent-color/50  shadow-2xl  w-80 flex animate-fadeIn`}
       onMouseEnter={() => setIshovered(true)}
       onMouseLeave={() => setIshovered(false)}
     >
@@ -28,8 +32,10 @@ const ProjectCard: React.FC<{
             {skills.map((skill) => (
               <li
                 className={`${
-                  ishovered ? "bg-white text-black" : "bg-accent-color/70"
-                } rounded-full px-2 border duration-300`}
+                  ishovered
+                    ? "bg-custom-dark/70 text-white"
+                    : "bg-accent-color/70 "
+                } rounded-full px-2  duration-300 text-black`}
                 key={skill}
               >
                 {skill}
