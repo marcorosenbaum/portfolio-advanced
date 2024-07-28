@@ -1,13 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 
 import photoMarco from "../assets/images/photo-marco.png";
 import RouteButton from "../components/RouteButton";
 import TypewriterText from "../components/TypewriterText";
+import AppContext from "../store/app-context";
 
 import { ChevronDown } from "lucide-react";
 
 export default function Home() {
   const [showChevronDown, setShowChevronDown] = useState(true);
+  const { darkMode } = useContext(AppContext);
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -42,7 +45,12 @@ export default function Home() {
                 words={["a Web Developer.", "a Team Player.", "an Optimist."]}
               />
             </h1>
-            <h1 id="text-vision" className="text-accent-color-dark">
+            <h1
+              id="text-vision"
+              className={`${
+                darkMode ? "text-accent-color" : "text-accent-color-dark"
+              } `}
+            >
               Turning Vision into Reality with Code.
             </h1>
           </div>

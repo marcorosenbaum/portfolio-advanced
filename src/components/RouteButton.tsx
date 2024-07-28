@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import classes from "./RouteButton.module.css";
 import TypewriterText from "./TypewriterText";
+import AppContext from "../store/app-context";
+import { useContext } from "react";
 
 const RouteButton: React.FC<{
   route: string;
@@ -8,10 +10,13 @@ const RouteButton: React.FC<{
   text: string[];
   image: string;
 }> = ({ route, heading, text, image }) => {
+  const { darkMode } = useContext(AppContext);
   return (
     <Link
       to={route}
-      className={`${classes["route-button"]} border border-accent-color shadow-xl rounded-lg  w-80 active:scale-105 duration-100 `}
+      className={`${classes["route-button"]} ${
+        darkMode ? "bg-[#18334e]" : "bg-white"
+      }  border border-accent-color shadow-xl rounded-lg  w-80 active:scale-105 duration-100 `}
     >
       <div className="">
         <img

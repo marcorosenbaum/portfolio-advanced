@@ -29,18 +29,22 @@ const ProjectCard: React.FC<{
           <h1 className="text-3xl">{title}</h1>
           <p className="h-32">{description}</p>
           <ul className="flex  gap-2">
-            {skills.map((skill) => (
-              <li
-                className={`${
-                  ishovered
-                    ? "bg-custom-dark/70 text-white"
-                    : "bg-accent-color/70 "
-                } rounded-full px-2  duration-300 text-black`}
-                key={skill}
-              >
-                {skill}
-              </li>
-            ))}
+            {skills.map((skill, index) => {
+              if (index < 3) {
+                return (
+                  <li
+                    className={`${
+                      ishovered
+                        ? "bg-custom-dark/70 text-white"
+                        : "bg-accent-color/70 "
+                    } rounded-full px-2  duration-300 text-black`}
+                    key={skill}
+                  >
+                    {skill}
+                  </li>
+                );
+              }
+            })}
           </ul>
 
           <div className="flex justify-center"></div>
