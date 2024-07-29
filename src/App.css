@@ -160,5 +160,5 @@ h2 {
 
 .start-screen {
   animation: reduceWidth 3s forwards;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }

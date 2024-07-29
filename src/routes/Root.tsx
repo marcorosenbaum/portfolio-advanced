@@ -1,8 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Header from "../components/Header";
 import { AnimatePresence, motion } from "framer-motion";
-// import { useContext } from "react";
-// import AppContext from "../store/app-context";
 
 function Root() {
   const location = useLocation();
