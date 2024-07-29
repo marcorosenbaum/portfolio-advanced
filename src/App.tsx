@@ -33,6 +33,10 @@ function App() {
         darkMode ? "text-white bg-custom-gradient " : ""
       } duration-300 `}
     >
+      <div className="flex gap-2">
+        <div className="start-screen fixed bottom-0 w-1/2 top-0 left-0 bg-black z-[1100]"></div>
+        <div className="start-screen fixed bottom-0 w-1/2 right-0 top-0  bg-black z-[1100]"></div>
+      </div>
       <RouterProvider router={router} />
     </div>
   );

@@ -34,7 +34,6 @@ const PROJECTS = [
     githubLink: "https:/github.com/marcorosenbaum/vtg-musli",
     websiteLink: "https://vtg-musli.de",
     learnings: [
-      "Working with a client",
       "Creating a website from scratch",
       "Fully responsive design",
       "Deploying a website via FileZilla (File Transfer Protocol)",

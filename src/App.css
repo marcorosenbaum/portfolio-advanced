@@ -1,19 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=League+Spartan:wght@100..900&family=Montserrat&family=Oswald&family=Quicksand:wght@300;400;500&family=Roboto&family=Roboto+Mono&display=swap");
-/* @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
-/* body {
+body {
   font-family: "JetBrains Mono";
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin: 0 auto;
+
 } */
 body {
   background: rgb(58, 77, 105);
   background: linear-gradient(
     309deg,
     rgb(92, 122, 167) 0%,
-    rgb(255, 255, 255) 48%,
+    rgb(255, 255, 255) 45%,
     rgb(82, 112, 157) 100%
   );
 }
@@ -135,4 +135,30 @@ h2 {
   h1 {
     font-size: 2rem;
   }
+}
+
+@media screen and (min-width: 2000px) {
+  html {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 3000px) {
+  html {
+    font-size: 40px;
+  }
+}
+
+@keyframes reduceWidth {
+  from {
+    width: 50%;
+  }
+  to {
+    width: 00%;
+  }
+}
+
+.start-screen {
+  animation: reduceWidth 3s forwards;
+  animation-delay: 2s;
 }

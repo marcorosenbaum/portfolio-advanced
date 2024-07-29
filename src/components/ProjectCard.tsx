@@ -24,7 +24,12 @@ const ProjectCard: React.FC<{
       onMouseLeave={() => setIshovered(false)}
     >
       <div className="card-content ">
-        <img src={image} alt={title} className="rounded-t-xl p-1 border-b" />
+        <img
+          src={image}
+          alt={title}
+          className="rounded-t-xl p-1 border-b"
+          loading="lazy"
+        />
         <div className=" p-4 flex flex-col gap-2 justify-between">
           <h1 className="text-3xl">{title}</h1>
           <p className="h-32">{description}</p>

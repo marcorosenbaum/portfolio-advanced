@@ -14,7 +14,7 @@ const RouteButton: React.FC<{
   return (
     <Link
       to={route}
-      className={`${classes["route-button"]} ${
+      className={`${classes["route-button"]} hover:scale-[102%] ${
         darkMode ? "bg-[#18334e]" : "bg-white"
       }  border border-accent-color shadow-xl rounded-lg  w-80 active:scale-105 duration-100 `}
     >
@@ -23,6 +23,7 @@ const RouteButton: React.FC<{
           src={image}
           alt={heading}
           className=" rounded-t-lg h-[12rem] w-full object-cover p-1"
+          loading="lazy"
         />
       </div>
       <div

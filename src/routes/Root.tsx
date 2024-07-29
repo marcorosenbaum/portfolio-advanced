@@ -1,14 +1,26 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Header from "../components/Header";
+import { AnimatePresence, motion } from "framer-motion";
 // import { useContext } from "react";
 // import AppContext from "../store/app-context";
 
 function Root() {
+  const location = useLocation();
+
   return (
     <div>
       <Header />
       <main>
-        <Outlet />
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div
+            key={location.pathname}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Outlet />
+          </motion.div>
+        </AnimatePresence>
       </main>
       <div className="md:fixed right-0 bottom-[15%] flex md:flex-col gap-4 p-4">
         {/* linkedin icon */}
@@ -45,11 +57,13 @@ function Root() {
       </div>
 
       <div className="  flex flex-col md:fixed gap-8 left-0 bottom-0 p-0 items-center">
-        <div className="rotate-90 font-thin">
-          contact me{" "}
-          <span className="line-through ">
-            {"                            "}
-          </span>
+        <div className="rotate-90 font-thin hover:text-accent-color">
+          <a href="mailto:marco.rosenbaum95@gmail.com">
+            contact me{" "}
+            <span className="line-through text-black">
+              {"                            "}
+            </span>
+          </a>
         </div>
         <div className=" h-20 w-[2px] bg-current"></div>
       </div>

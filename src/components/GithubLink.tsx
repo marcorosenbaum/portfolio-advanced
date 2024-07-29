@@ -1,6 +1,10 @@
 const GithubLink: React.FC<{ url: string }> = ({ url }) => {
   return (
-    <a href={url} target="blank" className="flex items-center gap-2">
+    <a
+      href={url}
+      target="blank"
+      className="flex items-center gap-2 hover:text-accent-color duration-300"
+    >
       <svg
         id="github-icon"
         xmlns="http://www.w3.org/2000/svg"

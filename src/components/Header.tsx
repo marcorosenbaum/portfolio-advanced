@@ -39,16 +39,16 @@ const Header = () => {
         shrinkHeader && windowWidth > 1000
           ? "md:w-1/5 md:top-4"
           : "w-10/12 px-16  md:top-1"
-      } z-[1000] w-10/12 p-4 fixed md:rounded-full md:border border-accent-color bg-gray-400/30 left-1/2 transform -translate-x-1/2 flex  backdrop-blur-md  transition-all duration-300`}
+      } z-[100] w-10/12 p-4 fixed md:rounded-full md:border border-accent-color bg-gray-400/30 left-1/2 transform -translate-x-1/2 flex  backdrop-blur-md  transition-all duration-300`}
     >
       <button
         className="ml-auto text-white"
         onClick={() => appCtx.setDarkMode()}
       >
         {appCtx.darkMode ? (
-          <Moon stroke="currentColor" size={24} />
+          <Moon stroke="currentColor" size="1.5rem" />
         ) : (
-          <Sun color="black" size={24} />
+          <Sun color="black" size="1.5rem" />
         )}
       </button>
 

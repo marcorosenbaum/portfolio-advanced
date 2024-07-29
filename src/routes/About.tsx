@@ -7,8 +7,8 @@ const TAGS = [
   "Prioritizes team success over personal archievements",
   "Believes in continuous learning",
   "Experienced team leader",
-  "Fullstack Developer",
   "Highly ambitious",
+  "Web Developer",
 ];
 
 const About: React.FC = () => {
@@ -18,14 +18,10 @@ const About: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="p-32 min-h-screen flex flex-col gap-10">
-      <div className="flex">
+    <div className="p-32 min-h-screen flex flex-col gap-24">
+      <div className="flex min-h-min">
         <div className="w-3/4">
           <h1 className="text-4xl font-bold text-center">About Me</h1>
-          {/* <p className="text-center mt-4">
-            I am a full-stack developer with a passion for creating beautiful
-            and functional websites and applications.
-          </p> */}
           <ul>
             {TAGS.map((tag, index) => (
               <li
@@ -40,16 +36,25 @@ const About: React.FC = () => {
             ))}
           </ul>
         </div>
-        <div className="w-1/4 h-80">
+        <div className="w-1/4 min-h-min">
           <img src={photoMarco} alt="Photo Marco" />
         </div>
       </div>
 
       <Skills />
-      {/* <h2 className="text-3xl font-bold text-center">My Tech-stack</h2> */}
+
+      <div className="flex justify-center items-center cv">
+        <a
+          href="../../public/CV_Marco_Rosenbaum.pdf"
+          target="_blank"
+          className="fly-in skill h-12 w-32 border-2 border-accent-color rounded-xl inline-flex items-center justify-center hover:bg-accent-color hover:text-black duration-300"
+          style={{ animationDelay: "1.8s" }}
+        >
+          View CV
+        </a>
+      </div>
     </div>
   );
 };
 
 export default About;
-// animate skills to fly in from the sides
