@@ -19,9 +19,12 @@ const ProjectCard: React.FC<{
       to={`/projectDetails/${id}`}
       className={`${
         darkMode ? "bg-custom-dark" : "bg-white"
-      } hover:scale-[102%] hover:text-black duration-300 card rounded-xl border border-accent-color/50  shadow-2xl  w-80 flex animate-fadeIn`}
+      } hover:scale-[102%] landsape:hover:text-black duration-300 card rounded-xl border border-accent-color/50  shadow-2xl  w-80 flex animate-fadeIn`}
       onMouseEnter={() => setIshovered(true)}
       onMouseLeave={() => setIshovered(false)}
+      onClick={() => {
+        setIshovered(false);
+      }}
     >
       <div className="card-content ">
         <img
