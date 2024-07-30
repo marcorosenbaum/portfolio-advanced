@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 import { useState, useContext } from "react";
 import AppContext from "../store/app-context";
 
+const isTouchDevice = () => {
+  return "ontouchstart" in window || navigator.maxTouchPoints > 0;
+};
+
 const ProjectCard: React.FC<{
   id: string;
   title: string;
@@ -42,7 +46,7 @@ const ProjectCard: React.FC<{
                 return (
                   <li
                     className={`${
-                      ishovered
+                      ishovered && isTouchDevice()
                         ? "bg-custom-dark/70 text-white"
                         : "bg-accent-color/70 "
                     } rounded-full px-2  duration-300 text-black`}
