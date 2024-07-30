@@ -1,10 +1,6 @@
 import { Link } from "react-router-dom";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import AppContext from "../store/app-context";
-
-const isTouchDevice = () => {
-  return "ontouchstart" in window || navigator.maxTouchPoints > 0;
-};
 
 const ProjectCard: React.FC<{
   id: string;
@@ -18,17 +14,30 @@ const ProjectCard: React.FC<{
   const [ishovered, setIshovered] = useState(false);
   const { darkMode } = useContext(AppContext);
 
+  const handleSetIsHovered = (isHovered: boolean) => {
+    setIshovered(isHovered);
+  };
+
+  useEffect(() => {
+    const handleTouchStart = () => {
+      handleSetIsHovered(false);
+    };
+
+    window.addEventListener("touchstart", handleTouchStart);
+
+    return () => {
+      window.removeEventListener("touchstart", handleTouchStart);
+    };
+  }, []);
+
   return (
     <Link
       to={`/projectDetails/${id}`}
       className={`${
         darkMode ? "bg-custom-dark" : "bg-white"
       } hover:scale-[102%] landsape:hover:text-black duration-300 card rounded-xl border border-accent-color/50  shadow-2xl  w-80 flex animate-fadeIn`}
-      onMouseEnter={() => setIshovered(true)}
-      onMouseLeave={() => setIshovered(false)}
-      onMouseUp={() => {
-        setIshovered(false);
-      }}
+      onMouseEnter={() => handleSetIsHovered(true)}
+      onMouseLeave={() => handleSetIsHovered(false)}
     >
       <div className="card-content ">
         <img
@@ -46,7 +55,7 @@ const ProjectCard: React.FC<{
                 return (
                   <li
                     className={`${
-                      ishovered && isTouchDevice()
+                      ishovered
                         ? "bg-custom-dark/70 text-white"
                         : "bg-accent-color/70 "
                     } rounded-full px-2  duration-300 text-black`}
