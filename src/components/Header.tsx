@@ -1,10 +1,12 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
 import AppContext from "../store/app-context";
 import { Moon, Sun, House, FolderOpenDot, SquareUserRound } from "lucide-react";
+import MenuModal from "./MenuModal";
 
 const Header = () => {
   const [shrinkHeader, setShrinkHeader] = useState(false);
+  const [showMenuModal, setShowMenuModal] = useState(false);
 
   const appCtx = useContext(AppContext);
 
@@ -32,14 +34,18 @@ const Header = () => {
     };
   }, []);
 
+  const handleMenuClick = () => {
+    setShowMenuModal((prevState) => !prevState);
+  };
+
   return (
     <header
       id="main-header"
       className={`${
-        shrinkHeader && windowWidth > 1000
-          ? "md:w-1/5 md:top-4"
-          : " px-16 w-full sm:w-10/12  md:top-1"
-      } z-[100] w-10/12 p-4 fixed md:rounded-full md:border border-accent-color bg-gray-400/30 left-1/2 transform -translate-x-1/2 flex  backdrop-blur-md  transition-all duration-300`}
+        shrinkHeader && windowWidth > 640 ? "sm:w-6/12 xl:w-3/12 sm:top-4" : " "
+      } px-16 w-full sm:w-10/12 gap-8 sm:top-1 z-[100] p-4 fixed sm:rounded-full sm:border border-accent-color  ${
+        appCtx.darkMode ? "bg-gray-400/30" : "bg-gray-400/50"
+      } left-1/2 transform -translate-x-1/2 flex  backdrop-blur-md  transition-all duration-300`}
     >
       <button className=" text-white" onClick={() => appCtx.setDarkMode()}>
         {appCtx.darkMode ? (
@@ -49,7 +55,7 @@ const Header = () => {
         )}
       </button>
 
-      {windowWidth > 1200 ? (
+      {windowWidth > 640 ? (
         <nav className="flex  gap-8 flex-1 justify-end ">
           <NavLink
             to="/"
@@ -86,8 +92,11 @@ const Header = () => {
           </NavLink>
         </nav>
       ) : (
-        <button className="ml-auto ">Menu</button>
+        <button className="ml-auto " onClick={handleMenuClick}>
+          Menu
+        </button>
       )}
+      {showMenuModal && <MenuModal closeMenu={handleMenuClick} />}
     </header>
   );
 };

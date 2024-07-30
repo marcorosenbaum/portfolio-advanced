@@ -34,10 +34,10 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="md:px-32">
-      <section className="start-section h-screen px-4  flex flex-col justify-between">
-        <div className="flex flex-col md:flex-row my-auto justify-around  ">
-          <div className=" md:w-1/2 text-7xl flex flex-col gap-4 mt-24">
+    <div className="md:px-32 ">
+      <section className="start-section min-h-screen px-4 flex flex-col justify-around">
+        <div className="flex flex-col  xl:flex-row gap-8 xl:my-auto justify-around  ">
+          <div className=" xl:w-1/2 text-7xl flex flex-col gap-12 mt-24">
             <h1 id="text-marco">
               I'm Marco,
               <br />
@@ -54,7 +54,7 @@ export default function Home() {
               Turning Vision into Reality with Code.
             </h1>
           </div>
-          <div className="md:w-1/2">
+          <div className="xl:w-1/2">
             <img src={photoMarco} alt="Marco Rosenbaum" loading="lazy" />
           </div>
         </div>
@@ -66,8 +66,8 @@ export default function Home() {
           }`}
         />
       </section>
-      <section className=" h-screen ">
-        <div className="flex  justify-around gap-8 items-center h-full">
+      <section className="md:h-screen   md:mt-0 py-24">
+        <div className="flex flex-col md:flex-row justify-around gap-16 items-center h-full">
           {/* image from 
 Lauren Mancke on unsplash */}
           <RouteButton

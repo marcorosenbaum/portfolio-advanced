@@ -18,7 +18,7 @@ const ProjectDetails = () => {
   }, []);
 
   return (
-    <div className="flex flex-col  rounded-xl p-32 gap-4">
+    <div className="flex flex-col min-h-screen rounded-xl landscape:p-32 p-4 py-24 gap-4">
       <img
         src={project?.image}
         alt={project?.title}
@@ -34,15 +34,15 @@ const ProjectDetails = () => {
         )}
       </div>
 
-      <div className="flex justify-between mt-8">
-        <div className="w-1/3 gap-4 flex flex-col">
+      <div className="flex flex-col gap-12 lg:flex-row justify-between mt-8">
+        <div className="lg:w-1/3 gap-4 flex flex-col">
           <h2 className=" underline text-4xl ">{project?.title}</h2>
           <div className="">{project?.descriptionLong}</div>
         </div>
 
         <div>
           <h3 className="text-2xl pb-4">Skills</h3>
-          <ul className="flex flex-col gap-4">
+          <ul className="flex flex-col gap-4 max-w-min">
             {project?.skills.map((skill) => (
               <li
                 className="px-2 border rounded-full border-current"
@@ -55,7 +55,7 @@ const ProjectDetails = () => {
         </div>
         <div>
           <h3 className="text-2xl pb-4 ">Learnings</h3>
-          <ul className=" flex flex-col gap-4">
+          <ul className=" flex flex-col px-4 gap-4">
             {project?.learnings?.map((learning) => (
               <li className="px-2 list-disc " key={learning}>
                 {learning}

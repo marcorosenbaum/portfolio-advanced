@@ -3,7 +3,7 @@ const GithubLink: React.FC<{ url: string }> = ({ url }) => {
     <a
       href={url}
       target="blank"
-      className="flex items-center gap-2 hover:text-accent-color duration-300"
+      className="flex items-center gap-2 landscape:hover:text-accent-color duration-300"
     >
       <svg
         id="github-icon"

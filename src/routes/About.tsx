@@ -18,9 +18,9 @@ const About: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="p-32 min-h-screen flex flex-col gap-24">
-      <div className="flex min-h-min">
-        <div className="w-3/4">
+    <div className="landscape:p-32 portrait:p-4 portrait:pt-24  min-h-screen flex flex-col gap-24">
+      <div className="flex min-h-min portrait:mx-auto">
+        <div className="landscape:w-3/4">
           <h1 className="text-4xl font-bold text-center">About Me</h1>
           <ul>
             {TAGS.map((tag, index) => (
@@ -36,18 +36,18 @@ const About: React.FC = () => {
             ))}
           </ul>
         </div>
-        <div className="w-1/4 min-h-min">
+        <div className="w-1/4 min-h-min portrait:hidden">
           <img src={photoMarco} alt="Photo Marco" />
         </div>
       </div>
 
       <Skills />
 
-      <div className="flex justify-center items-center cv">
+      <div className="flex justify-center items-center cv portrait:mb-20">
         <a
           href="../../public/CV_Marco_Rosenbaum.pdf"
           target="_blank"
-          className="fly-in skill h-12 w-32 border-2 border-accent-color rounded-xl inline-flex items-center justify-center hover:bg-accent-color hover:text-black duration-300"
+          className="fly-in skill h-12 w-32 border-2 border-accent-color rounded-xl inline-flex items-center justify-center landscape:hover:bg-accent-color landscape:hover:text-black duration-300"
           style={{ animationDelay: "1.8s" }}
         >
           View CV

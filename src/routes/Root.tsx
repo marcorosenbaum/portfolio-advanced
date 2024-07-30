@@ -20,7 +20,7 @@ function Root() {
           </motion.div>
         </AnimatePresence>
       </main>
-      <div className="md:fixed right-0 bottom-[15%] flex md:flex-col gap-4 p-4">
+      <div className="portrait:hidden md:fixed md:right-0 md:bottom-[15%]  flex md:flex-col gap-4 p-4">
         {/* linkedin icon */}
         <a href="https://linkedin.com/in/marcorosenbaum" target="_blank">
           <svg
@@ -54,7 +54,7 @@ function Root() {
         </a>
       </div>
 
-      <div className="  flex flex-col md:fixed gap-8 left-0 bottom-0 p-0 items-center">
+      <div className="portrait:hidden flex flex-col md:fixed gap-8 left-0 bottom-0 p-0 items-center">
         <div className="rotate-90 font-thin hover:text-accent-color">
           <a href="mailto:marco.rosenbaum95@gmail.com">
             contact me{" "}
