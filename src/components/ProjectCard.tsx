@@ -15,9 +15,7 @@ const ProjectCard: React.FC<{
   const { darkMode } = useContext(AppContext);
 
   const handleSetIsHovered = (isHovered: boolean) => {
-    if (window.innerWidth > window.innerHeight) {
-      setIshovered(isHovered);
-    }
+    setIshovered(isHovered);
   };
 
   return (
@@ -25,7 +23,7 @@ const ProjectCard: React.FC<{
       to={`/projectDetails/${id}`}
       className={`${
         darkMode ? "bg-custom-dark" : "bg-white"
-      } hover:scale-[102%] landsape:hover:text-black duration-300 card rounded-xl border border-accent-color/50  shadow-2xl  w-80 flex animate-fadeIn`}
+      } hover:scale-[102%]  landsape:hover:text-black duration-300 card rounded-xl border border-accent-color/50  shadow-2xl  w-80 flex animate-fadeIn`}
       onMouseEnter={() => handleSetIsHovered(true)}
       onMouseLeave={() => handleSetIsHovered(false)}
     >
@@ -48,7 +46,7 @@ const ProjectCard: React.FC<{
                       ishovered
                         ? "bg-custom-dark/70 text-white"
                         : "bg-accent-color/70 "
-                    } rounded-full px-2  duration-300 text-black`}
+                    } rounded-full  px-2  duration-300 text-black`}
                     key={skill}
                   >
                     {skill}
