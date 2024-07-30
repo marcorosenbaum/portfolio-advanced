@@ -45,8 +45,9 @@ const About: React.FC = () => {
 
       <div className="flex justify-center items-center cv portrait:mb-20">
         <a
-          href="../../public/CV_Marco_Rosenbaum.pdf"
+          href="/CV_Marco_Rosenbaum.pdf"
           target="_blank"
+          rel="noopener noreferrer"
           className="fly-in skill h-12 w-32 border-2 border-accent-color rounded-xl inline-flex items-center justify-center landscape:hover:bg-accent-color landscape:hover:text-black duration-300"
           style={{ animationDelay: "1.8s" }}
         >
