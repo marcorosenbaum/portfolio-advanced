@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import classes from "./RouteButton.module.css";
-import TypewriterText from "./TypewriterText";
-import AppContext from "../store/app-context";
+import TypewriterText from "../TypewriterText";
+import AppContext from "../../store/app-context";
 import { useContext } from "react";
 
 const RouteButton: React.FC<{

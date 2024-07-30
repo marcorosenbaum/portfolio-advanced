@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 
 import photoMarco from "../assets/images/photo-marco.png";
-import RouteButton from "../components/RouteButton";
+import RouteButton from "../components/RouteButton/RouteButton";
 import TypewriterText from "../components/TypewriterText";
 import AppContext from "../store/app-context";
 
