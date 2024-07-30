@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext } from "react";
 import AppContext from "../store/app-context";
 
 const ProjectCard: React.FC<{
