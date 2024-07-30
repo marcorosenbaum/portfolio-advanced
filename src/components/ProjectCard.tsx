@@ -22,7 +22,7 @@ const ProjectCard: React.FC<{
       } hover:scale-[102%] landsape:hover:text-black duration-300 card rounded-xl border border-accent-color/50  shadow-2xl  w-80 flex animate-fadeIn`}
       onMouseEnter={() => setIshovered(true)}
       onMouseLeave={() => setIshovered(false)}
-      onClick={() => {
+      onMouseUp={() => {
         setIshovered(false);
       }}
     >
