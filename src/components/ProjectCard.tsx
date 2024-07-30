@@ -15,20 +15,10 @@ const ProjectCard: React.FC<{
   const { darkMode } = useContext(AppContext);
 
   const handleSetIsHovered = (isHovered: boolean) => {
-    setIshovered(isHovered);
+    if (window.innerWidth > window.innerHeight) {
+      setIshovered(isHovered);
+    }
   };
-
-  useEffect(() => {
-    const handleTouchStart = () => {
-      handleSetIsHovered(false);
-    };
-
-    window.addEventListener("touchstart", handleTouchStart);
-
-    return () => {
-      window.removeEventListener("touchstart", handleTouchStart);
-    };
-  }, []);
 
   return (
     <Link
