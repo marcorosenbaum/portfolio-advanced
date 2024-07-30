@@ -31,7 +31,7 @@ const PROJECTS = [
     descriptionLong:
       "VTG-Musli is a local car dealer in northern Germany. The goal was to create a simple and clean website that showcases the services and partners of the company. ",
     skills: ["JavaScript", "Vue", "Tailwind"],
-    githubLink: "https:/github.com/marcorosenbaum/vtg-musli",
+    githubLink: "https://github.com/marcorosenbaum/vtg-musli",
     websiteLink: "https://vtg-musli.de",
     learnings: [
       "Creating a website from scratch",
@@ -48,7 +48,7 @@ const PROJECTS = [
       "This is the first version of my personal portfolio website. I focused on creating a clean and simple portfolio that showcases my projects and skills. ",
     skills: ["JavaScript", "Vue", "Tailwind"],
     githubLink: "https://github.com/marcorosenbaum/portfolio",
-    websiteLink: "",
+    websiteLink: "https://marcorosenbaum-v1.netlify.app/",
     learnings: [
       "Creating a personal portfolio",
       "Building reusable components",
