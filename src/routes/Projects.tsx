@@ -9,6 +9,13 @@ const Projects = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(() => {
+    fetch("/.netlify/functions/increase_clicks", {
+      method: "POST",
+      body: JSON.stringify({ id: "routes", value: "projects" }),
+    });
+  }, []);
+
   return (
     <section className="px-32">
       <div className=" py-32">
@@ -16,17 +23,16 @@ const Projects = () => {
       </div>
       <div className="flex min-h-screen gap-20  justify-center  pb-20 flex-wrap">
         {PROJECTS.map((project) => (
-          <Link to={`/projectDetails/${project.id}`} key={project.id}>
-            <ProjectCard
-              id={project.id}
-              image={project.image}
-              title={project.title}
-              description={project.description}
-              skills={project.skills}
-              githubLink={project.githubLink}
-              websiteLink={project.websiteLink}
-            />
-          </Link>
+          <ProjectCard
+            key={project.id}
+            id={project.id}
+            image={project.image}
+            title={project.title}
+            description={project.description}
+            skills={project.skills}
+            githubLink={project.githubLink}
+            websiteLink={project.websiteLink}
+          />
         ))}
       </div>
     </section>
