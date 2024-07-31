@@ -1,6 +1,12 @@
 import type { Handler } from "@netlify/functions";
 import { MongoClient } from "mongodb";
 
+const uri = process.env.MONGODB_URI!;
+if (!uri) {
+  console.error("MONGODB_URI is not defined");
+  throw new Error("MONGODB_URI is not defined");
+}
+
 const client = new MongoClient(process.env.MONGODB_URI!);
 
 async function increaseClicks(documentId: string | null, value: string | null) {
