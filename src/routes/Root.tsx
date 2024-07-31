@@ -21,7 +21,6 @@ function Root() {
         </AnimatePresence>
       </main>
       <div className="portrait:hidden md:fixed md:right-0 md:bottom-[15%]  flex md:flex-col gap-4 p-4">
-        {/* linkedin icon */}
         <a href="https://linkedin.com/in/marcorosenbaum" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +36,6 @@ function Root() {
           </svg>
         </a>
 
-        {/* github icon */}
         <a href="https://github.com/marcorosenbaum" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
