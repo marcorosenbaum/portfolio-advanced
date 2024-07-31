@@ -17,6 +17,14 @@ const ProjectDetails = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(() => {
+    const valueDB = project?.title.toLowerCase().replace(/\s+/g, "-");
+    fetch("/.netlify/functions/increase_clicks", {
+      method: "POST",
+      body: JSON.stringify({ id: "projects", value: valueDB }),
+    });
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen rounded-xl landscape:p-32 p-4 py-24 gap-4">
       <img
