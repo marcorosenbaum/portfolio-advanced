@@ -6,9 +6,6 @@ import ProjectCard from "../components/ProjectCard";
 const Projects = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
     fetch("/.netlify/functions/increase_clicks", {
       method: "POST",
       body: JSON.stringify({ id: "routes", value: "projects" }),

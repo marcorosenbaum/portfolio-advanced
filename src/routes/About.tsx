@@ -16,14 +16,12 @@ const About: React.FC = () => {
   useEffect(() => {
     setIsVisible(true);
     window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
     fetch("/.netlify/functions/increase_clicks", {
       method: "POST",
       body: JSON.stringify({ id: "routes", value: "about" }),
     });
   }, []);
+
   return (
     <div className="landscape:p-32 portrait:p-4 portrait:pt-24  min-h-screen flex flex-col gap-24">
       <div className="flex min-h-min portrait:mx-auto">
