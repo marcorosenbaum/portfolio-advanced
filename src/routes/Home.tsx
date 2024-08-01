@@ -39,15 +39,17 @@ export default function Home() {
       <Helmet>
         <meta
           name="description"
-          content="Marco Rosenbaum - Web Developer. Turning Vision into Reality with Code."
+          content="Marco Rosenbaum - Web Developer. Learn more about me and view my projects in my portfolio."
         />
-        <meta property="og:title" content="Marco Rosenbaum - Web Developer" />
+        <meta property="og:title" content="Portfolio Marco Rosenbaum" />
         <meta
           property="og:description"
           content="My name is Marco Rosenbaum. I'm a Web Developer. Have a look at my projects and learn more about me."
         />
-        <meta property="og:image" content={photoMarco} />
-        <meta property="og:url" content="https://marcorosenbaum.netlify.app" />
+        <meta
+          property="og:image"
+          content="https://marcorosenbaum.netlify.app/assets/photo-marco-2WdzdPYo.png"
+        />
       </Helmet>
       <div className="md:px-32 ">
         <section className="start-section min-h-screen px-4 flex flex-col justify-around">
