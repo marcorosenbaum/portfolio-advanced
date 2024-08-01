@@ -3,6 +3,7 @@ import PhotoMusic from "./assets/images/photo-music.png";
 import PhotoFlashcards from "./assets/images/photo-flashcards.png";
 import PhotoOgPreview from "./assets/images/photo-og-preview.png";
 import PhotoPortfolioV1 from "./assets/images/photo-portfolio-v1.png";
+import PhotoPortfolioAdvanced from "./assets/images/photo-portfolio-advanced.png";
 
 const PROJECTS = [
   {
@@ -99,6 +100,25 @@ const PROJECTS = [
       "Storing data in Firebase",
       "Translating content with vue-i18n",
       "Testing with Vitest",
+    ],
+  },
+  {
+    id: "6",
+    title: "Portfolio-Advanced",
+    image: PhotoPortfolioAdvanced,
+    description:
+      "The second Version of my portfolio website. Implemented netlify functions to create costum website analytics in MongoDB.",
+    descriptionLong:
+      "This is the second version of my personal portfolio website. I focused on creating a clean and simple portfolio that showcases my projects and skills. I implemented netlify functions to create costum website analytics, like tracking clicks, on MongoDB.",
+    skills: ["TypeScript", "React", "MongoDB", "Tailwind", "Netlify"],
+    githubLink: "https://github.com/marcorosenbaum/portfolio-advanced",
+    websiteLink: "https://marcorosenbaum.netlify.app/",
+    learnings: [
+      "Working with MongoDB",
+      "Creating netlify functions",
+      "Tracking clicks on the website",
+      "Using React Hooks",
+      "Implementing a dark-mode",
     ],
   },
 ];
