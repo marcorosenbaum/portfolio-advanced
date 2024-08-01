@@ -1,4 +1,5 @@
 import "./App.css";
+import { HelmetProvider } from "react-helmet-async";
 
 import Root from "./routes/Root.tsx";
 import Home from "./routes/Home.tsx";
@@ -36,13 +37,15 @@ function App() {
   }, []);
 
   return (
-    <div
-      className={`${
-        darkMode ? "text-white bg-custom-gradient " : ""
-      } duration-300 `}
-    >
-      <RouterProvider router={router} />
-    </div>
+    <HelmetProvider>
+      <div
+        className={`${
+          darkMode ? "text-white bg-custom-gradient " : ""
+        } duration-300 `}
+      >
+        <RouterProvider router={router} />
+      </div>
+    </HelmetProvider>
   );
 }
 
