@@ -42,6 +42,11 @@ async function increaseClicks(documentId: string | null, value: string | null) {
 }
 
 export const handler: Handler = async (event, context) => {
+  console.log("Event Headers:", event.headers);
+  console.log("Event:", event);
+  console.log("Context:", context);
+  console.log("MONGODB_URI:", process.env.MONGODB_URI);
+
   const documentId = event.body ? JSON.parse(event.body).id : null;
   const value = event.body ? JSON.parse(event.body).value : null;
   await increaseClicks(documentId, value);
